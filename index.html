@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalender Projekt</title>
+    <script src="javascript/today.js"></script>
+    <script src="javascript/calendar.js"></script>
+    <script src="javascript/todo.js"></script>
+    <script src="javascript/dayForSmallScreen.js"></script>
+    <script src="javascript/backgroundImg.js"></script>
+    <script src="javascript/main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b66f49be9e.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <div class="grid-container">
+
+        <header class="header">Kalender</header>
+        <aside class="aside">
+            <div class="welcome" data-cy="welcome-segment">
+                <h1 class="welcome-title"></h1>
+                <span class="welcome-time"></span>
+            </div>
+            <div class="todo">
+                
+                <div class="todo-top-container">
+                <h4 class="todo-title">Todo</h4>
+                
+                <ul class="todo-list" data-cy="todo-list">
+                        <li class="todo-item">
+                        <span class="todo-text"></span>
+                        <div class="todo-right">
+                        <div class="todo-edits">
+                            <button class="edit-todo" data-cy="edit-todo"><i class="fa-regular fa-pen-to-square"></i></button>
+                            <button class="delete-todo" data-cy="delete-todo"><i class="fa-solid fa-trash-can"></i></button>
+                        </div>
+                    </div>
+                    </li>
+                </ul>
+                <div class="todo-add">
+                    <div class="new-todo-div">
+                        <h4 class="add-todo-title">Ny todo</h4>
+                        <input class="todo-input" type="text" data-cy="todo-task-input">
+                    </div>
+
+                    <div class="todo-meta">
+                        <form action="" class="todo-form">
+                        <label for="add-todo-date" class="add-todo-date-title">Välj datum</label>
+                        <div class="add-todo-div">
+                            <input type="date" id="add-todo-date"  data-cy="todo-date-input" name="add-todo-date" class="add-todo-date">
+                            <button class="save-todo-btn" data-cy="save-todo">Spara todo</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                
+        </aside>
+
+        <main class="calendar">
+            <div class="calendar-top">
+                <div class="month">
+                    <button class="calendar-prev-btn" data-cy="prev-month">
+                        <img src="images/chevron-left.svg" alt="" class="calendar-prev-icon">
+                    </button>
+                    <h2 class="month-and-year-title"></h2>
+                    <button class="calendar-next-btn" data-cy="next-month">
+                        <img src="images/chevron-right.svg" alt="" class="calendar-next-icon">
+                    </button>
+                </div>
+                <div class="day-of-week">
+                    <span class="weekday">Måndag</span>
+                    <span class="weekday">Tisdag</span>
+                    <span class="weekday">Onsdag</span>
+                    <span class="weekday">Torsdag</span>
+                    <span class="weekday">Fredag</span>
+                    <span class="weekday">Lördag</span>
+                    <span class="weekday">Söndag</span>
+                </div>
+            </div>
+            <div class="calendar-content date-grid" data-cy="calendar-body">
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

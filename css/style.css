@@ -1,0 +1,338 @@
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-accent: #f29fc3;
+    --color-bg: #eeeeee;
+    --color-bg: #fffffff2;
+    --color-btns: #556573;
+    --color-holiday: #eeeeee;
+}
+
+html {
+    font-size: 10px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-image: url(../images/mars.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #4E4E4E;
+}
+
+input {
+    font-family: 'Poppins';
+    color: #4c4c4c;
+}
+
+body {
+    margin: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    height: 100%;
+    min-height: 100vh;
+    grid-template-areas: 
+    "header header"
+    "aside calendar";
+
+    grid-template-columns: 30vw 1fr;
+    grid-template-rows: 60px 1fr;
+}
+
+button {
+    white-space: nowrap;
+    border-radius: 2px;
+}
+
+.header {
+    grid-area: header;
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    font-size: 3.5rem;
+    padding: 3.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #262626;
+}
+
+/* Aside general settings */
+
+aside {
+    grid-area: aside;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.6rem 0 3rem 3rem;
+}
+
+.todo-top-container, .welcome {
+    border-radius: 1.3rem;
+    background-color: var(--color-bg);
+    padding: 2rem;
+}
+
+/* Welcome */
+.welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-title {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.welcome-time {
+    font-size: 2rem;
+}
+
+/* Todo section */
+
+.todo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.todo-item span {
+    font-size: 1.2rem;
+    color: #737272;
+}
+
+span.todo-text {
+    font-size: 1.6rem;
+    color: #4E4E4E;;
+}
+
+
+.todo-input {
+    width: 100%;
+}
+
+.todo-right {
+    display: flex;
+    align-items: center;
+    gap:1rem;
+}
+
+.todo-right span {
+    white-space: nowrap;
+}
+
+.todo-edits {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    justify-content: right;
+}
+
+.edit-todo, .delete-todo {
+    background-color: var(--color-btns);
+    border: none;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 1.8rem;
+    transition: 0.3s ease;
+}
+
+.edit-todo, .delete-todo i {
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.edit-todo:hover, .delete-todo:hover {
+    background-color: #7f9fb8bb;
+}
+
+.todo-list {
+    margin: 0;
+    padding: 0rem;
+    justify-content: space-between;
+}
+
+.todo {
+    width: 100%;
+}
+
+.todo-title {
+    font-size: 2.6rem;
+    margin: 1rem 0;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    padding: .8rem 0;
+    gap: 2rem;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.todo-item li, .todo-input, .add-todo-date {
+    background-color:transparent;
+}
+
+.todo-meta {
+    width: 100%;
+    padding-top: 2rem;
+}
+
+.todo-item:hover button {
+    transform: translateX(0);
+}
+
+.add-todo-div {
+    margin-top: 1rem;
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.add-todo-title, .add-todo-date-title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.add-todo-title {
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem 0;
+}
+
+.add-todo-date {
+    /* width: 60%; */
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    flex-grow: 1;
+    width: 0;
+}
+
+#add-todo-date, .save-todo-btn, .todo-input {
+    padding: 1rem;
+}
+
+.save-todo-btn {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    border: 0;
+    background-color:var(--color-btns);
+    margin-left: 1rem;
+    height: 4.7rem;
+}
+
+.save-todo-btn:hover {
+    background-color: #7f9fb8bb;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    margin-top: 1.6rem;
+    border-radius: 1.3rem;
+    padding: 0px 1.3rem;
+    padding-top: 0;
+    background-color: var(--color-bg);
+}
+
+.calendar button {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+
+.calendar-top {
+    display: flex;
+    flex-direction: column;
+}
+
+.month {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;
+
+}
+
+.month-and-year-title {
+    font-size: 3.6rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.day {
+    padding: 1rem;
+    min-height: 50px;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 300;
+    position: relative;
+}
+
+.reminder {
+    padding: 0.3rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--color-accent);
+    border-radius: 4rem;
+    position: absolute;
+    top: 1rem;
+    right: 10%;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.day-of-week,
+.date-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: 1fr;
+}
+
+.day-of-week {
+    text-align: center;
+}
+
+.day-of-week {
+    font-size: 2rem;
+}
+
+.date-grid {
+    height: 100%;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+}
+
+
+.current-day {
+    background-color:#7f9fb894;;
+}
+
+.holiday {
+    background-color: var(--color-holiday);
+    font-size: 1.2rem;
+}
