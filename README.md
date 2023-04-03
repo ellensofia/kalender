@@ -1,5 +1,3 @@
 # Kalenderverktyg i Javascript.
 
-## This was a group project where we made a calendar where you can add todos.
-
-## You can view project in live server
+As a group project we made a calendar where you can add todos. View the project [here](https://ellensofia.github.io/kalender/)
